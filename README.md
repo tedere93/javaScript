@@ -4,6 +4,9 @@
 
 Program Rezolvat ecuatie de grad 2
 
+
+
+
 ## Programe Tablete
 
 ## Programe SmartWatch
