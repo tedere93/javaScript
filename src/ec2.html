@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title></title>
+</head>
+<body>
+
+	<input type="text" id="a" placeholder="X^2">
+	<input type="text" id="b" placeholder="X^1">
+	<input type="text" id="c" placeholder="X^0">
+	<button onclick="solve()">Solve!</button>
+	
+	<p id="x1"></p>
+	<p id="x2"></p>
+	<p id="delta"></p>
+
+
+	<script>
+		function solve(){
+			var a = document.getElementById("a").value;
+			var b = document.getElementById("b").value;
+			var c = document.getElementById("c").value;
+
+			var delta = (b*b)-(4*a*c);
+			document.getElementById("delta").innerHTML = delta;
+		}	
+
+
+
+	</script>
+
+</body>
+</html>
+
