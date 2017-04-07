@@ -5,11 +5,11 @@
 Program Rezolvat ecuatie de grad 2
 
 
-
-
 ## Programe Tablete
 
 ## Programe SmartWatch
 
 
-Tudor Samuilă
+contact: Samuila Tudor
+tedere87@gmail.com
+
