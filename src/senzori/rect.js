@@ -21,9 +21,9 @@ function ondeviceorientation(evt){
 	context.translate(centru.x,centru.y);
 	context.rotate(alpha * Math.PI/180);
 	
-	
+		
 	context.beginPath();
-	context.rect(- latura_patrat / 2,- latura_patrat / 2, latura_patrat, latura_patrat);
+	context.rect(- latura_patrat / 2 * (-beta) *(canvas.width/2 - latura_patrat * 1.42/2 )/90,- latura_patrat / 2 * gamma * (canvas.height/2 - latura_patrat * 1.42/2)/90, latura_patrat, latura_patrat);
 	context.stroke();
 
 
