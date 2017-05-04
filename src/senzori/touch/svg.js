@@ -1,10 +1,14 @@
 var c1 = document.getElementById("cerc1");
 c1.addEventListener("touchmove",ontouchmove);
+var c2 = document.getElementById("cerc2");
+c2.addEventListener("touchmove",ontouchmove);
+
 
 function ontouchmove(e){
-	var t = e.changedTouches[0];
-	var x = c1.getAttribute("cx");
-
-	c1.setAttribute("cx",t.pageX);
-	c1.setAttribute("cy",t.pageY);
+	for(var i=0;i<e.changedTouches.length;i++){
+		var t = e.changedTouches[i];
+		var c = t.target;
+		c.setAttribute("cx",t.pageX);
+		c.setAttribute("cy",t.pageY);	
+	}
 }
