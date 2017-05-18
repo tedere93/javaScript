@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title></title>
+</head>
+<body>
+
+
+<p id="level"></p>
+<p id="bool"></p>
+<p id="time"></p>
+
+
+
+
+
+<script>
+	
+	var battery = navigator.battery || navigator.webkitBattery || navigator.mozBattery;
+
+function logBattery(battery) {
+    console.log(battery.level);
+    console.log(battery.charging);
+    console.log(battery.dischargingTime);
+
+    battery.addEventListener('chargingchange', function() {
+        console.log('Battery chargingchange event: ' + battery.charging);
+    }, false);
+    document.getElementById("level").innerHTML=battery.level;
+	document.getElementById("bool").innerHTML=battery.charging;
+	document.getElementById("time").innerHTML=battery.dischargingTime;
+}
+
+if (navigator.getBattery) {
+    navigator.getBattery().then(logBattery);
+} else if (battery) {
+    logBattery(battery);
+}
+
+
+
+
+</script>
+
+
+	
+</body>
+</html>
+
+
+

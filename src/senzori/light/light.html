@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title></title>
+</head>
+<body>
+
+
+<p id="devicelight"></p>
+<p id="lightlevel"></p>
+<p id=""></p>
+
+
+
+
+
+<script>
+function light1(event) {
+            //light level is returned in lux units
+            console.log(event.value + " lux");
+            document.getElementById("devicelight").innerHTML=event.value + " lux";
+        }
+    if('ondevicelight' in window) {
+        window.addEventListener("devicelight", light1);
+    }
+    function light2(event) {
+            //light value can be dim, normal or bright
+            console.log(event.value);
+            document.getElementById("lightlevel").innerHTML=event.value;
+        }
+    if('onlightlevel' in window){
+        window.addEventListener("lightlevel", light2);
+    }
+</script>
+
+
+	
+</body>
+</html>
+

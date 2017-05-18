@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title></title>
+</head>
+<body>
+
+<p id="cm"></p>
+<p id="close"></p>
+
+<script>
+function proximity(event) {
+        // Object distance in centimeters 
+        console.log(event.value + " centimeters");
+        document.getElementById("cm").innerHTML=event.value + " centimeters"+ " "+ event.max + " "+ event.min;
+    }
+	if('ondeviceproximity' in window) {
+    // Fired when object is in the detection zone
+    window.addEventListener('deviceproximity',proximity);
+
+} else {
+    console.log("deviceproximity not supported");
+    document.getElementById("cm").innerHTML="deviceproximity not supported";
+}
+
+function user_proximity(event) {
+        if(event.near == true) {
+            console.log("Object is near");
+            document.getElementById("close").innerHTML="Close";
+        } else {
+            console.log("Object is far");
+            document.getElementById("close").innerHTML="Far";
+        }
+    }
+if('ondeviceproximity' in window){
+    // Fired when object is in the detection zone
+    window.addEventListener('userproximity', user_proximity);
+} else {
+    console.log("userproximity not supported");
+}
+</script>
+	
+</body>
+</html>
+

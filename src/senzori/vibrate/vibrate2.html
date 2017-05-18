@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<svg width="400" height="400">
+	<circle cx="50" cy="50" r="40" stroke="yellow" stroke-width="4" fill="yellow" id="circle1"/>	
+
+	<circle cx="150" cy="150" r="40" stroke="red" stroke-width="4" fill="red" id="circle2"/>
+</svg>
+
+	<script type="text/javascript">
+		
+		function vibrate1(){
+			// Vibrate for 1 second (1000 milliseconds).
+			navigator.vibrate(1000);
+}
+function vibrate2(){
+			navigator.vibrate(2000);
+	}
+
+	document.getElementById("circle1").addEventListener("touchstart",vibrate1);
+	document.getElementById("circle2").addEventListener("touchstart",vibrate2);
+
+	</script>
+	
+
+</body>
+</html>
+
